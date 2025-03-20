@@ -43,15 +43,26 @@
 
 ## Инструкция для запуска телеграм-бота
 
-Для запуска необходимо иметь предустановленный компилятор Python3 с пакетным менеджером pip (см. https://www.python.org/downloads/), а также создать собственного телеграм-бота и сохранить его токен (см. https://core.telegram.org/bots/tutorial#obtain-your-bot-token).
+Для запуска необходимо иметь предустановленный интерпретатор Python3 с пакетным менеджером pip (см. https://www.python.org/downloads/), а также создать собственного телеграм-бота и сохранить его токен (см. https://core.telegram.org/bots/tutorial#obtain-your-bot-token).
 
-1. Загрузите все файлы из текущего репозитория.
-   - Для Linux/Windows CLI: `git clone https://github.com/poorjude/corp-telegram-bot` (для запуска команды необходимо иметь предустановленный git)
-2. Скачайте библиотеки *aiogram* и *openpyxl* через pip.
-   - Для Linux/Windows CLI: `pip install aiogram openpyxl`
-3. Создайте файл *token.txt* в корневой директории загруженного репозитория, в его первую строку скопируйте токен от телеграм-бота.
-   - Для Linux CLI: `touch ./token.txt && nano ./token.txt`, вставляем/вписываем токен в первую строку открывшегося файла, сохраняем (Ctrl+S), выходим (Ctrl+X).
-4. Запустите код через интерпретатор Python.
-   - Для Linux/Windows CLI: `py ./bot.py`
+1. Скачайте библиотеки *aiogram* и *openpyxl* через pip.
+   ```
+   pip install aiogram openpyxl
+   ```
+3. Загрузите все файлы из текущего репозитория.\
+   Для Linux/Windows CLI (необходимо иметь предустановленный git):
+   ```
+   git clone https://github.com/poorjude/corp-telegram-bot
+   ```
+5. Создайте файл *token.txt* в корневой директории загруженного репозитория, в его первую строку скопируйте токен от телеграм-бота.\
+   Для Linux CLI:
+   ```
+   cd corp-telegram-bot && touch token.txt && nano token.txt
+   ```
+   Затем вставляем/вписываем токен в первую строку открывшегося файла, сохраняем (Ctrl+S), выходим (Ctrl+X).
+4. Запустите код.
+   ```
+   py bot.py
+   ```
 
 ## (to be edited)
