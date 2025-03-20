@@ -50,8 +50,8 @@
 2. Скачайте библиотеки *aiogram* и *openpyxl* через pip.
    - Для Linux/Windows CLI: `pip install aiogram openpyxl`
 3. Создайте файл *token.txt* в корневой директории загруженного репозитория, в его первую строку скопируйте токен от телеграм-бота.
-   - Для Linux CLI: `touch .\token.txt && nano .\token.txt`, вставляем/вписываем токен в первую строку открывшегося файла, сохраняем (Ctrl+S), выходим (Ctrl+X).
+   - Для Linux CLI: `touch ./token.txt && nano ./token.txt`, вставляем/вписываем токен в первую строку открывшегося файла, сохраняем (Ctrl+S), выходим (Ctrl+X).
 4. Запустите код через интерпретатор Python.
-   - Для Linux/Windows CLI: `py .\bot.py`
+   - Для Linux/Windows CLI: `py ./bot.py`
 
 ## (to be edited)
