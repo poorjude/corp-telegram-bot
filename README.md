@@ -43,7 +43,7 @@
 
 ## Инструкция для запуска телеграм-бота
 
-Для запуска необходимо иметь предустановленный интерпретатор Python3 с пакетным менеджером pip (см. https://www.python.org/downloads/), а также создать собственного телеграм-бота и сохранить его токен (см. https://core.telegram.org/bots/tutorial#obtain-your-bot-token).
+Для запуска необходимо установить интерпретатор Python3 с пакетным менеджером pip (см. https://www.python.org/downloads/), а также создать собственного телеграм-бота и сохранить его токен (см. https://core.telegram.org/bots/tutorial#obtain-your-bot-token).
 
 1. Скачайте библиотеки *aiogram* и *openpyxl* через pip.
    ```
