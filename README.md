@@ -43,7 +43,7 @@
 
 ## Инструкции для установки и запуска телеграм-бота
 
-Для любого из способов необходимо создать телеграм-бота в диалоге с @BotFather и сохранить его токен (см. https://core.telegram.org/bots/tutorial#obtain-your-bot-token).\
+Для любого из способов необходимо создать телеграм-бота в диалоге с @BotFather и сохранить его токен (см. https://core.telegram.org/bots/tutorial#obtain-your-bot-token). \
 Перечисленные ниже способы проверены на Windows 11 и Linux Ubuntu 24.
 
 ### Вручную
@@ -75,20 +75,18 @@
 Только для Linux, необходимы: python3, pip, git.\
 Запустите и вставьте в терминал:
 ```
-curl https://raw.githubusercontent.com/poorjude/corp-telegram-bot/refs/heads/main/installScripts/installBareMetal.sh /
--O installCorpTgBot_BareMetal.sh
-chmod u+x installCorpTgBot_BareMetal.sh
-sudo bash installCorpTgBot_BareMetal.sh
+curl https://raw.githubusercontent.com/poorjude/corp-telegram-bot/refs/heads/main/installScripts/installBareMetal.sh -O
+chmod u+x installBareMetal.sh
+sudo bash installBareMetal.sh
 ```
 
 ### Через скрипт, в docker-контейнер
-Только для Linux, необходимы: python3, pip, git, docker.\
+Только для Linux, необходимы: git, docker.\
 Запустите и вставьте в терминал:
 ```
-curl https://raw.githubusercontent.com/poorjude/corp-telegram-bot/refs/heads/main/installScripts/installDockerized.sh /
--O installCorpTgBot_Dockerized.sh
-chmod u+x installCorpTgBot_Dockerized.sh
-sudo bash installCorpTgBot_Dockerized.sh
+curl https://raw.githubusercontent.com/poorjude/corp-telegram-bot/refs/heads/main/installScripts/installDockerized.sh -O
+chmod u+x installDockerized.sh
+sudo bash installDockerized.sh
 ```
 
 ## (to be edited)
