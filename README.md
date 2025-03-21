@@ -41,20 +41,25 @@
 - Для каждого сотрудника в справочнике могут быть указаны: фотография, ФИО, должность, телефон, электронная почта, телеграм;
 - Помимо данных, которые явно выводятся в справочнике, есть и скрытые служебные: например, id каждого сотрудника в телеграме, по которому определяется, может ли сотрудник пользоваться ботом.
 
-## Инструкция для запуска телеграм-бота
+## Инструкции для установки и запуска телеграм-бота
 
-Для запуска необходимо установить интерпретатор Python3 с пакетным менеджером pip (см. https://www.python.org/downloads/), а также создать собственного телеграм-бота и сохранить его токен (см. https://core.telegram.org/bots/tutorial#obtain-your-bot-token).
+Для любого из способов необходимо создать телеграм-бота в диалоге с @BotFather и сохранить его токен (см. https://core.telegram.org/bots/tutorial#obtain-your-bot-token).\
+Перечисленные ниже способы проверены на Windows 11 и Linux Ubuntu 24.
 
-1. Скачайте библиотеки *aiogram* и *openpyxl* через pip.
+### Вручную
+
+Подходит для Linux и Windows, необходимы: python, pip.
+
+1. Установите библиотеки *aiogram* и *openpyxl* через pip.
    ```
    pip install aiogram openpyxl
    ```
-3. Загрузите все файлы из текущего репозитория.\
+2. Загрузите все файлы из текущего репозитория.\
    Для Linux/Windows CLI (необходимо иметь предустановленный git):
    ```
    git clone https://github.com/poorjude/corp-telegram-bot
    ```
-5. Создайте файл *token.txt* в корневой директории загруженного репозитория, в его первую строку скопируйте токен от телеграм-бота.\
+3. Создайте файл *token.txt* в корневой директории загруженного репозитория, в его первую строку скопируйте токен от телеграм-бота.\
    Для Linux CLI:
    ```
    cd corp-telegram-bot && touch token.txt && nano token.txt
@@ -62,7 +67,28 @@
    Затем вставляем/вписываем токен в первую строку открывшегося файла, сохраняем (Ctrl+S), выходим (Ctrl+X).
 4. Запустите код.
    ```
-   py bot.py
+   python bot.py
    ```
+
+### Через скрипт
+
+Только для Linux, необходимы: python3, pip, git.\
+Запустите и вставьте в терминал:
+```
+curl https://raw.githubusercontent.com/poorjude/corp-telegram-bot/refs/heads/main/installScripts/installBareMetal.sh /
+-O installCorpTgBot_BareMetal.sh
+chmod u+x installCorpTgBot_BareMetal.sh
+sudo bash installCorpTgBot_BareMetal.sh
+```
+
+### Через скрипт, в docker-контейнер
+Только для Linux, необходимы: python3, pip, git, docker.\
+Запустите и вставьте в терминал:
+```
+curl https://raw.githubusercontent.com/poorjude/corp-telegram-bot/refs/heads/main/installScripts/installDockerized.sh /
+-O installCorpTgBot_Dockerized.sh
+chmod u+x installCorpTgBot_Dockerized.sh
+sudo bash installCorpTgBot_Dockerized.sh
+```
 
 ## (to be edited)
