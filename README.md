@@ -43,7 +43,7 @@
 
 ## Инструкции для установки и запуска телеграм-бота
 
-Для любого из способов необходимо создать телеграм-бота в диалоге с @BotFather и сохранить его токен (см. https://core.telegram.org/bots/tutorial#obtain-your-bot-token).\
+Для любого из способов необходимо создать телеграм-бота в диалоге с @BotFather и сохранить его токен (см. https://core.telegram.org/bots/tutorial#obtain-your-bot-token). \
 Перечисленные ниже способы проверены на Windows 11 и Linux Ubuntu 24.
 
 ### Вручную
@@ -82,7 +82,7 @@ sudo bash installCorpTgBot_BareMetal.sh
 ```
 
 ### Через скрипт, в docker-контейнер
-Только для Linux, необходимы: python3, pip, git, docker.\
+Только для Linux, необходимы: git, docker.\
 Запустите и вставьте в терминал:
 ```
 curl https://raw.githubusercontent.com/poorjude/corp-telegram-bot/refs/heads/main/installScripts/installDockerized.sh /
