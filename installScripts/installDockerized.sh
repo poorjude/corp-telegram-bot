@@ -16,9 +16,9 @@ echo $token > token.txt
 
 # создаём docker image
 docker build . -t corp-telegram-bot
-echo "Был создан docker image с именем corp-telegram-bot."
+printf "\nБыл создан docker image с именем corp-telegram-bot.\n\n"
 
 # запускаем контейнер
 docker run -d --name=corp-telegram-bot corp-telegram-bot
-echo "Был создан и запущен docker-контейнер с именем corp-telegram-bot."
-echo "Для того чтобы посмотреть его статус, выполните: docker ps [-a]."
+printf "\nБыл создан и запущен docker-контейнер с именем corp-telegram-bot.\n"
+printf "Для того чтобы посмотреть его статус, выполните: [sudo] docker ps [-a].\n\n"
