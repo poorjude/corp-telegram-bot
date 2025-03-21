@@ -1,6 +1,12 @@
 #!/bin/bash
 
-# устанавливаем код бота
+# проверяем, что пользователь - root
+if [ $EUID -ne 0 ]; then 
+    echo "Вы должны запустить скрипт от имени root (используйте sudo)!"
+    exit
+fi
+
+# скачиваем код бота
 git clone https://github.com/poorjude/corp-telegram-bot
 
 # сохраняем токен
