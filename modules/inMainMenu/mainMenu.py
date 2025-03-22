@@ -32,9 +32,11 @@ MAIN_MENU_KB = ag.types.ReplyKeyboardMarkup(
 )
 
 # Хэндлер команды /main_menu, входная точка любой сессии для пользователей.
-# При вызове затирает данные и состояния FSM, если такие были
+# При вызове затирает данные и состояния FSM пользователя, если такие были
 @rt.message(ag.filters.command.Command("main_menu"))
 async def mainMenu_handler(message: ag.types.Message, state: ag.fsm.context.FSMContext):
+    # Очищаем данные
+    await state.clear()
     if not common.isUserWorkingInCompany(message.from_user.id):
         await message.answer(
             "😔 К сожалению, вас нет в списке сотрудников нашей компании. Вы не можете пользоваться этим ботом.\n\n" +
@@ -45,8 +47,6 @@ async def mainMenu_handler(message: ag.types.Message, state: ag.fsm.context.FSMC
             "Вы перешли в главное меню. Пожалуйста, выберите один из пунктов меню ниже.", 
             reply_markup=MAIN_MENU_KB
         )
-        # Очищаем данные на случай, если пользователь прервал предыдущую сессию
-        await state.clear()
         await state.set_state(mainMenu.choosingOption)
 
 # Клавиатура стадии improvalSuggestion.anonOrNot
